@@ -1,0 +1,52 @@
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(0px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(10px);
+    }
+  }
+  
+  .terms-container {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+  }
+  
+  .terms-container h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2d3748;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .terms-container h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin-top: 2rem;
+    animation: fadeInUp 1s ease-out 0.2s;
+    animation-fill-mode: both;
+  }
+  
+  .terms-container p {
+    font-size: 1rem;
+    color: #4a5568;
+    animation: fadeInUp 1s ease-out 0.4s;
+    animation-fill-mode: both;
+  }
+  
+  .terms-container ul {
+    animation: fadeInUp 1s ease-out 0.6s;
+    animation-fill-mode: both;
+  }
+  
+  .terms-container a {
+    color: #3182ce;
+    text-decoration: none;
+  }
+  
+  .terms-container a:hover {
+    text-decoration: underline;
+  }
