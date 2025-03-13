@@ -3,6 +3,8 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+import 'animate.css';
 
 export default function VerifyResetCode() {
   const [isLoading, setIsLoading] = useState(false);
@@ -51,10 +53,16 @@ export default function VerifyResetCode() {
   });
 
   return (
-    <section>
+<>
+<Helmet>
+  <title>
+  Verify Reset Code  
+  </title>
+</Helmet>
+<section>
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto my-20 lg:py-0">
         <div className="w-full bg-slate-400 bg-opacity-20 p-6 rounded-lg shadow-lg md:mt-0 sm:max-w-xl xl:p-0">
-          <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
+          <div className="p-6 space-y-4 md:space-y-6 sm:p-8 animate__animated animate__bounceInRight">
             <h1 className="mb-8 text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
               Verify Reset Code
             </h1>
@@ -140,5 +148,6 @@ export default function VerifyResetCode() {
         </div>
       </div>
     </section>
+</>
   );
 }

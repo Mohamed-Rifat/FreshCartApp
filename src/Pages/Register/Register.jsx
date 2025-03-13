@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Helmet } from 'react-helmet';
+import styled from 'styled-components';
 
 export default function Register() {
   const [isLoading, setIsLoading] = useState(false);
@@ -49,7 +50,6 @@ export default function Register() {
         );
 
         if (response.status === 201) {
-          alert('Registration successful!');
           navigate('/login');
         }
       } catch (error) {
@@ -64,7 +64,52 @@ export default function Register() {
       }
     },
   });
+  const StyledWrapper = styled.div`
+  .signupBtn {
+    width: 120px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+    gap: 9px;
+    color: white;
+    background: linear-gradient(to right, rgb(128, 128, 255), rgb(183, 128, 255));
+    position: relative;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.212);
+    transition: background 0.3s ease;
+  }
 
+  .arrow {
+    position: absolute;
+    right: 7.5px;
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  .signupBtn:hover .arrow {
+    animation: slide-in-left 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+  @keyframes slide-in-left {
+    0% {
+      transform: translateX(-10px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+`;
   return (
   <>
   <Helmet>
@@ -228,39 +273,26 @@ export default function Register() {
                 ) : null}
               </div>
             </div>
-            <button
-              type="submit"
-              className="w-full my-4 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-colors duration-200 flex items-center justify-center animate-slide-in-up"
-              disabled={isLoading || !formik.isValid}
-            >
-              {isLoading ? (
-                <>
-                  <span className="mr-2">Loading...</span>
-                  <svg
-                    className="animate-spin h-5 w-5 text-white"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle
-                      className="opacity-25"
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                    ></circle>
-                    <path
-                      className="opacity-75"
-                      fill="currentColor"
-                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                    ></path>
-                  </svg>
-                </>
-              ) : (
-                'Submit'
-              )}
-            </button>
+            <StyledWrapper>
+                <button className="signupBtn ms-auto" type="submit" disabled={isLoading || !formik.isValid}>
+                  {isLoading ? (
+                    <>
+                      <span className="mr-2">Loading...</span>
+                      <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                    </>
+                  ) : (
+                    <>
+                      SIGN UP
+                      <span className="arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" fill="rgb(183, 128, 255)"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" /></svg>
+                      </span>
+                    </>
+                  )}
+                </button>
+              </StyledWrapper>
             <label className="font-light text-gray-500 animate-slide-in-up">
               Already have an account?{' '}
               <Link
