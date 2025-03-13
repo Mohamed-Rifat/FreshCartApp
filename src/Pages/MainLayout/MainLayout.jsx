@@ -6,7 +6,7 @@ import freshbg from '../../assets/Images/light-patten.svg';
 
 export default function Mainlayout() {
   return (
-    <div style={{ backgroundImage: `url(${freshbg})` }}>
+    <div className='pt-20' style={{ backgroundImage: `url(${freshbg})` }}>
        <Navbar/>
        <Outlet/>
        <Footer/>
