@@ -1,10 +1,10 @@
 import React from 'react';
-import amazonPay from './../../assets/images/amazon-pay.webp';
-import americanExpress from './../../assets/images/png-clipart-american-express.png';
-import masterCard from './../../assets/images/MasterCard_Logo.svg.png';
-import payPal from './../../assets/images/PayPal.png';
-import appStore from './../../assets/Images/App-store.png';
-import googlePlay from './../../assets/images/Google-play.webp';
+import amazonPay from '../../assets/images/amazon-pay.webp';
+import americanExpress from '../../assets/images/png-clipart-american-express.png';
+import masterCard from '../../assets/images/MasterCard_Logo.svg.png';
+import payPal from '../../assets/images/PayPal.png';
+import appStore from '../../assets/Images/App-store.png';
+import googlePlay from '../../assets/images/Google-play.webp';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
