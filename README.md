@@ -1,8 +1,36 @@
-# React + Vite
+Fresh Cart Store - E-commerce App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🔗 Live Demo
 
-Currently, two official plugins are available:
+👉 [View Live Website](https://fresh-cart-store-app.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+
+
+✨ Key Features
+Product catalog with images and prices
+
+Interactive cart (add/remove/update items)
+
+Fully responsive mobile-friendly UI
+
+
+🛠️ Tech Stack
+Frontend: React, Tailwind CSS
+
+Deployment: Vercel
+
+---
+
+## 📬 Contact Me
+
+Feel free to connect with me on:
+
+- 📧 Email: `Mohamed.rifat100@gmail.com`
+- 💼 [LinkedIn](https://www.linkedin.com/in/mohamedrifat97/)
+- 🧑‍💻 [GitHub](https://github.com/Mohamed-Rifat)
+Contact: [01148036811] | [01222800121]
+---
+
+> Made with ❤️ by Mohamed Refaat
