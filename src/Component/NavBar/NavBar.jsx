@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import logo from '../../assets/images/freshcart-logo.svg';
+import logo from '../../assets/Images/freshcart-logo.svg';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { FaHeart, FaFacebook, FaInstagram, FaLinkedin, FaTiktok, FaTwitter, FaYoutube } from 'react-icons/fa';
 import './NavBar.css';
